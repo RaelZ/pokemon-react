@@ -68,3 +68,7 @@ export type RoundButtonTheme = {
   color: ColorTheme
   children: ReactNode
 }
+export type ModalBGTheme = {
+  theme?: boolean;
+  onClose?: () => void;
+}

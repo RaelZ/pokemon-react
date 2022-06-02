@@ -6,5 +6,10 @@ export type LanguageProps = {
 }
 export type LanguageContextType = {
   language: 'ptBR' | 'enUS'
-  seLanguage: (theme: 'ptBR' | 'enUS') => void
+  changeLanguage: (theme: 'ptBR' | 'enUS') => void
+}
+export type LanguagesType = {
+  id: number,
+  name: Language,
+  icon: string
 }

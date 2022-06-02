@@ -7,7 +7,8 @@ const EN = {
   },
   navBar: {
     logo: 'Logo',
-    rightSide: 'Right',
+    register: 'Register',
+    login: 'Login',
   },
 };
 
