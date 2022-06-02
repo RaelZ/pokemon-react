@@ -1,7 +1,7 @@
 export const lighTheme = {
   colors: {
     primary: '#FAFAFA',
-    secondary: '#8A0000',
+    secondary: '#BA0000',
     alternative: '#1A1A1A',
     alternative2: '#C2C2C2',
     card: '#E0E0E0',

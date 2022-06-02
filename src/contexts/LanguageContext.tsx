@@ -7,7 +7,7 @@ export const LanguageContext = createContext<LanguageContextType>({
 })
 
 const LanguageProvider: FC<LanguageProps> = ({ children }) => {
-  const [language, seLanguage] = React.useState<Language>('enUS')
+  const [language, seLanguage] = React.useState<Language>('ptBR')
 
   return (
     <LanguageContext.Provider value={{ language, seLanguage }}>

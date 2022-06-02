@@ -24,9 +24,13 @@ export const StyledNavLeft = styled.div`${({ theme }: { theme: StyleTheme }) => 
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  width: 50%
 `}`
 export const StyledNavRight = styled.div`${({ theme }: { theme: StyleTheme }) => `
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  width: 50%;
 `}`
