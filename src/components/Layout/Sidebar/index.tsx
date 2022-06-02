@@ -11,15 +11,12 @@ const Sidebar: React.FC = () => {
   const { language } = useLanguage();
   const buttons = dataButtons(language);
   const themedButton = themeButton(language, theme)
-  const [count, setCount] = React.useState(0);
 
   return (
     <StyledSideBar theme={themes[theme]}>
       <div>
         {buttons.map((button, index) => (
-          <SquaredButton
-            key={index}
-          >
+          <SquaredButton key={index}>
             <>
               {button.icon}
               <p>{button.name}</p>
@@ -30,11 +27,11 @@ const Sidebar: React.FC = () => {
       <SquaredButton onClick={() => changeTheme()}>
         <>
           {themedButton.icon}
-          <p>{`${themedButton.name} - ${theme}`}</p>
+          <p>
+            {`${themedButton.name} - ${theme}`}
+          </p>
         </>
       </SquaredButton>
-      <p>{count}</p>
-      <button onClick={() => setCount(+count)}>AA</button>
     </StyledSideBar>
   );
 }

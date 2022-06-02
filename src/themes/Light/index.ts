@@ -1,11 +1,11 @@
 export const lighTheme = {
   colors: {
-    primary: '#1A1A1A',
+    primary: '#FAFAFA',
     secondary: '#8A0000',
-    alternative: '#C2C2C2',
-    alternative2: '#FAFAFA',
-    card: '#3A3A3A',
-    divider: '#1A1A1A80',
+    alternative: '#1A1A1A',
+    alternative2: '#C2C2C2',
+    card: '#E0E0E0',
+    divider: '#C2C2C280',
   },
   fontSizes: {
     small: '0.75rem',
