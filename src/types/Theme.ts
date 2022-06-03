@@ -72,3 +72,6 @@ export type ModalBGTheme = {
   theme?: boolean;
   onClose?: () => void;
 }
+export type Content = {
+  children: ReactNode
+}

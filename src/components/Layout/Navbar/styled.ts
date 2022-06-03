@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { StyleTheme } from '../../../types/Theme'
 
 export const StyledNav = styled.nav`${({ theme }: { theme: StyleTheme }) => `
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   

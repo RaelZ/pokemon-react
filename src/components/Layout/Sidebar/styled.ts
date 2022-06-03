@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { StyleTheme } from '../../../types/Theme'
 
 export const StyledSideBar = styled.div`${({ theme }: { theme: StyleTheme }) => `
-  position: fixed;
+  position: relative;
   bottom: 0;
 
   display: flex;

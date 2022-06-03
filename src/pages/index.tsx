@@ -1,20 +1,12 @@
 import type { ReactElement } from 'react'
 import { Layout } from '../components/Layout'
-import LanguageProvider from '../contexts/LanguageContext'
-import ThemeProvider from '../contexts/ThemeContext'
 
 const Page = () => {
-  return <></>
+  return <><div>N ENTENDI</div></>
 }
 
 Page.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <LanguageProvider>
-      <ThemeProvider>
-        <Layout>{page}</Layout>
-      </ThemeProvider>
-    </LanguageProvider>
-  )
+  return <Layout>{page}</Layout>
 }
 
 export default Page
