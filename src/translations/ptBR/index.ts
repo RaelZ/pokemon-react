@@ -8,7 +8,7 @@ const PT = {
   navBar: {
     logo: 'Logo',
     register: 'Registrar',
-    login: 'Login',
+    login: 'Entrar',
   }
 };
 export default PT;

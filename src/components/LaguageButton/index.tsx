@@ -14,16 +14,12 @@ const LaguageButton: React.FC = () => {
   const { theme } = useTheme()
   const { language, changeLanguage } = useLanguage()
   const [open, setOpen] = useState(false)
-  const currentButton = useRef(null)
   const actualLanguage = dataLanguages.find((find) => find.name === language)
-
-  console.log(currentButton)
 
   return (
     <>
       <StyledLanguageButton
         onClick={() => setOpen(!open)}
-        ref={currentButton.current}
         theme={themes[theme]}
       >
         {actualLanguage?.icon}

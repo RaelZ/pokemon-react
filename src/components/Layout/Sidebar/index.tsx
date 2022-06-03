@@ -27,9 +27,7 @@ const Sidebar: React.FC = () => {
       <SquaredButton onClick={() => changeTheme()}>
         <>
           {themedButton.icon}
-          <p>
-            {`${themedButton.name} - ${theme}`}
-          </p>
+          <p>{`${themedButton.name} - ${theme}`}</p>
         </>
       </SquaredButton>
     </StyledSideBar>
