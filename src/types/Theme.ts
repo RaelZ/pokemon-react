@@ -39,6 +39,13 @@ export type StyleTheme = {
     large: string
     xlarge: string
   }
+  padding: {
+    xsmall: string
+    small: string
+    medium: string
+    large: string
+    xlarge: string
+  }
   radii: {
     small: string
     medium: string
@@ -67,10 +74,12 @@ export type RoundButtonTheme = {
   bgcolor: ColorTheme
   color: ColorTheme
   children: ReactNode
+  noPadding?: boolean
+  onClick?: () => void
 }
 export type ModalBGTheme = {
-  theme?: boolean;
-  onClose?: () => void;
+  theme?: boolean
+  onClose?: () => void
 }
 export type Content = {
   children: ReactNode

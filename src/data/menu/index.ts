@@ -1,7 +1,7 @@
-import { config, game, home, moon, sun } from "../../../../icons";
-import languages from "../../../../translations";
-import { Language } from "../../../../types/Language";
-import { Theme } from "../../../../types/Theme";
+import { config, game, home, moon, sun } from "../../icons";
+import languages from "../../translations";
+import { Language } from "../../types/Language";
+import { Theme } from "../../types/Theme";
 
 export const dataButtons = (language: Language) => [
   {

@@ -8,11 +8,19 @@ const RoundButton: React.FC<RoundButtonTheme> = ({
   children,
   color,
   bgcolor,
+  noPadding,
+  onClick
 }) => {
   const { theme } = useTheme()
 
   return (
-    <StyledRoundButton color={color} bgcolor={bgcolor} theme={themes[theme]}>
+    <StyledRoundButton
+      onClick={onClick}
+      noPadding={noPadding}
+      color={color}
+      bgcolor={bgcolor}
+      theme={themes[theme]}
+    >
       {children}
     </StyledRoundButton>
   )

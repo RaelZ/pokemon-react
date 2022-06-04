@@ -17,3 +17,6 @@ a {
   box-sizing: border-box;
   font-style: 'Rajdhani', sans-serif;
 }
+div#_next {
+  height: 100%;
+}
