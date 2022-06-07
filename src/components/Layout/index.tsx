@@ -3,9 +3,9 @@ import Content from './Content'
 import Navbar from './Navbar'
 import SidebarOpen from './SidebarOpen'
 import Sidebar from './Sidebar'
+import { Children } from '../../types/Children'
 
-export function Layout({ children }: { children: React.ReactNode }) {
-
+const Layout: React.FC<Children> = ({ children }) => {
   return (
     <div style={{ height: 'calc(100vh - 4.375em)' }}>
       <Navbar />
@@ -17,3 +17,5 @@ export function Layout({ children }: { children: React.ReactNode }) {
     </div>
   )
 }
+
+export default Layout

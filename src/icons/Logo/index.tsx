@@ -1,9 +1,8 @@
 import React from 'react'
 import useTheme from '../../hooks/useTheme'
 import { themes } from '../../themes'
-import { HamburguerIcon } from '../../types/Icons'
 
-const Logo: React.FC<HamburguerIcon> = () => {
+const Logo = () => {
   const { theme } = useTheme()
 
   return (

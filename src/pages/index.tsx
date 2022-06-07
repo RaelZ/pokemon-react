@@ -1,15 +1,18 @@
 import type { ReactElement } from 'react'
-import { Layout } from '../components/Layout'
+import Section from '../components/Section';
 
 const Page = () => {
   return (
     <>
+      <Section>
+        <h1>Hello World</h1>
+      </Section>
     </>
-  )
+  );
 }
 
 Page.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>
+  return <>{page}</>
 }
 
 export default Page

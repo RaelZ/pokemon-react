@@ -7,7 +7,7 @@ export const StyledRoundButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  padding: ${noPadding ? '.5em' : '.5em 1em'};
+  padding: ${noPadding ? '.5em' : '.35em 1em'};
   margin: 0 .5em;
 
   background-color: ${theme!.colors[bgcolor]};

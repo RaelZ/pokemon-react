@@ -1,7 +1,7 @@
 import useTheme from '../../hooks/useTheme'
 import { themes } from '../../themes'
 
-const Hamburguer: React.FC = () => {
+const Hamburguer = () => {
   const { theme } = useTheme()
   return (
     <svg

@@ -1,8 +1,8 @@
 import React from 'react'
-import { Content } from '../../../types/Theme'
+import { Children } from '../../../types/Children'
 import { StyledContainer } from './styled'
 
-const Content: React.FC<Content> = ({ children }) => {
+const Content: React.FC<Children> = ({ children }) => {
   return <StyledContainer>{children}</StyledContainer>
 }
 

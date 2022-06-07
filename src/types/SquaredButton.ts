@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-export type SquaredButton = {
+export type TSquaredButton = {
   children: ReactNode
   onClick?: () => void
   open: boolean

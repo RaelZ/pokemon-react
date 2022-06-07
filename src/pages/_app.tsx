@@ -5,14 +5,10 @@ import type { NextPage } from 'next'
 import LanguageProvider from '../contexts/LanguageContext'
 import ThemeProvider from '../contexts/ThemeContext'
 import SidebarProvider from '../contexts/SidebarContext'
+import Layout from '../components/Layout'
 
-type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode
-}
-
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout
-}
+type NextPageWithLayout = NextPage & { getLayout?: (page: ReactElement) => ReactNode }
+type AppPropsWithLayout = AppProps & { Component: NextPageWithLayout }
 
 const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page)
@@ -21,7 +17,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
     <LanguageProvider>
       <ThemeProvider>
         <SidebarProvider>
-          {getLayout(<Component {...pageProps} />)}
+          <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
         </SidebarProvider>
       </ThemeProvider>
     </LanguageProvider>
