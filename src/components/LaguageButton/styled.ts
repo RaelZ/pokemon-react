@@ -33,6 +33,8 @@ export const StyledMenu = styled.div`${({ theme }: {theme: StyleTheme}) => `
   align-items: center;
   justify-content: center;
   border-radius: 0;
+
+  z-index: 303;
 `}`;
 export const SquaredLanguageButton = styled.button`${({ theme }: {theme: StyleTheme}) => `
   position: relative;

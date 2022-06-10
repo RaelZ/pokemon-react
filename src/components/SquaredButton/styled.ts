@@ -32,11 +32,11 @@ export const StyledSquareButton = styled.button`${({ theme, open }: { theme: Sty
     font-size: ${theme.fontSizes.medium};
     
     margin: .1em 0 0;
-    padding-left: ${theme.space.large};
+    padding-left: ${theme.space.medium};
     
     height: 100%;
   }
   svg {
-    font-size: ${theme.fontSizes.small};
+    font-size: ${theme.fontSizes.medium};
   }
 `}`;

@@ -1,3 +1,5 @@
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { dataButtons, themeButton } from '../../../data/menu'
 import useLanguage from '../../../hooks/useLanguage'
@@ -19,18 +21,14 @@ const SidebarOpen: React.FC = () => {
       <div>
         {buttons.map((button, index) => (
           <SquaredButton open={menuOpen} key={index}>
-            <>
-              {button.icon}
-              <p>{button.name}</p>
-            </>
+            <FontAwesomeIcon fontSize={36} icon={button.icon} />
+            <p>{button.name}</p>
           </SquaredButton>
         ))}
       </div>
       <SquaredButton open={menuOpen} onClick={() => changeTheme()}>
-        <>
-          {themedButton.icon}
-          <p>{`${themedButton.name} - ${theme}`}</p>
-        </>
+        <FontAwesomeIcon icon={themedButton.icon} />
+        <p>{`${themedButton.name} - ${theme}`}</p>
       </SquaredButton>
     </StyledSideBar>
   )

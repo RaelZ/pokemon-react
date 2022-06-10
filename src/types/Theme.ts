@@ -75,6 +75,6 @@ export type RoundButtonTheme = {
   onClick?: () => void
 }
 export type ModalBGTheme = {
-  theme?: boolean
+  background?: boolean
   onClose?: () => void
 }

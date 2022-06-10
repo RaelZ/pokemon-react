@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { StyleTheme } from '../../types/Theme';
 
 export const NavBarLayout = styled.div`
   display: flex;
@@ -24,3 +25,12 @@ export const NavBarRight = styled.div`
   align-items: center;
   justify-content: space-between;
 `
+export const StyledMain = styled.main`${({ theme, open }: { theme: StyleTheme, open: boolean }) => `
+  position: relative;
+  bottom: 0;
+  left: ${open ? '0' : '5em'};
+
+  transition: left 0.25s ease-;
+
+  width: 100%;
+`}`;

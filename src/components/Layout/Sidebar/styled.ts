@@ -3,25 +3,24 @@ import { StyleTheme } from '../../../types/Theme'
 
 export const StyledSideBar = styled.div`
   ${({ theme, open }: { theme: StyleTheme; open: boolean }) => `
-  position: relative;
+  position: absolute;
   bottom: 0;
-  left: ${open ? '0' : '-100%'};
+  left: 0;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  width: ${open ? '100%' : '0'};
-  max-width: ${open ? '5.000em' : '0'};
+  width: 100%;
+  max-width: 4.4em;
   height: 100%;
 
   background-color: ${theme.colors.primary};
-  color: ${theme.colors.alternative};
-
-  transition: all .25s ease-in-out;
+  opacity: ${open ? '1' : '0'};
 
   box-sizing: border-box;
+  transition: opacity 0.5s;
 
-  z-index: ${theme.zIndices.sidebar};
+  z-index: ${open ? theme.zIndices.sidebar : 0};
 `}
 `
