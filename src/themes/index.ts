@@ -31,21 +31,21 @@ const sizes = {
     large: '1rem',
     xlarge: '1.5rem',
   },
-  radii: {
+  radio: {
     small: '0.25rem',
     medium: '0.5rem',
     large: '1rem',
     xlarge: '1.5rem',
   },
   shadows: {
-    small: '0 0.25rem 0.5rem rgba(0, 0, 0, 0.2)',
-    medium: '0 0.5rem 1rem rgba(0, 0, 0, 0.2)',
-    large: '0 0.75rem 1.5rem rgba(0, 0, 0, 0.2)',
+    small: '0 0 0.5rem rgba(0, 0, 0, 0.2)',
+    medium: '0 0 1rem rgba(0, 0, 0, 0.2)',
+    large: '0 0 1.5rem rgba(0, 0, 0, 0.2)',
   },
   zIndices: {
     header: 100,
-    navbar: 200,
-    sidebar: 300,
+    navbar: 300,
+    sidebar: 200,
     footer: 400,
   },
 }

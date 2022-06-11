@@ -1,9 +1,6 @@
 import { ReactNode } from 'react'
 
 export type Theme = 'dark' | 'light'
-export type ThemeProps = {
-  children: ReactNode
-}
 export type ThemeContextType = {
   theme: 'dark' | 'light'
   changeTheme: () => void
@@ -46,7 +43,7 @@ export type StyleTheme = {
     large: string
     xlarge: string
   }
-  radii: {
+  radio: {
     small: string
     medium: string
     large: string
@@ -78,9 +75,6 @@ export type RoundButtonTheme = {
   onClick?: () => void
 }
 export type ModalBGTheme = {
-  theme?: boolean
+  background?: boolean
   onClose?: () => void
-}
-export type Content = {
-  children: ReactNode
 }

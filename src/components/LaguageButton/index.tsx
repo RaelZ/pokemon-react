@@ -1,14 +1,15 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import useLanguage from '../../hooks/useLanguage'
 import useTheme from '../../hooks/useTheme'
 import { themes } from '../../themes'
 import ModalBG from '../ModalBG'
-import { dataLanguages } from './dataButtons'
+import { dataLanguages } from '../../data/dataButtons'
 import {
   SquaredLanguageButton,
   StyledLanguageButton,
   StyledMenu,
 } from './styled'
+import ReactCountryFlag from 'react-country-flag'
 
 const LaguageButton: React.FC = () => {
   const { theme } = useTheme()
@@ -22,11 +23,11 @@ const LaguageButton: React.FC = () => {
         onClick={() => setOpen(!open)}
         theme={themes[theme]}
       >
-        {actualLanguage?.icon}
+        <ReactCountryFlag countryCode={actualLanguage?.icon || 'BR'} />
       </StyledLanguageButton>
       {open && (
         <>
-          <ModalBG onClose={() => setOpen(false)} theme={false} />
+          <ModalBG onClose={() => setOpen(false)} />
           <StyledMenu theme={themes[theme]}>
             {dataLanguages.map((item) => (
               <SquaredLanguageButton
@@ -34,7 +35,7 @@ const LaguageButton: React.FC = () => {
                 key={item.id}
                 theme={themes[theme]}
               >
-                {item.icon}
+                <ReactCountryFlag countryCode={item.icon} />
               </SquaredLanguageButton>
             ))}
           </StyledMenu>

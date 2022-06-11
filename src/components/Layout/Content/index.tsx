@@ -1,9 +1,12 @@
 import React from 'react'
-import { Content } from '../../../types/Theme'
+import useSidebar from '../../../hooks/useSidebar'
+import { Children } from '../../../types/Children'
 import { StyledContainer } from './styled'
 
-const Content: React.FC<Content> = ({ children }) => {
-  return <StyledContainer>{children}</StyledContainer>
+const Content: React.FC<Children> = ({ children }) => {
+  const { menuOpen } = useSidebar()
+
+  return <StyledContainer open={menuOpen}>{children}</StyledContainer>
 }
 
 export default Content

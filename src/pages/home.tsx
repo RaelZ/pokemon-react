@@ -1,14 +1,10 @@
 import React, { ReactElement } from 'react'
-import { Layout } from '../components/Layout'
 
-const Home = () => {
-  return (
-    <>
-    </>
-  )
+const Page = () => {
+  return <></>
 }
 
-Home.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>
+Page.getLayout = function getLayout(page: ReactElement) {
+  return <>{page}</>
 }
-export default Home
+export default Page

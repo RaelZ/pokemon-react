@@ -1,14 +1,14 @@
-import { LanguagesType } from '../../../types/Language'
+import { LanguagesType } from '../../types/Language'
 
 export const dataLanguages: Array<LanguagesType> = [
   {
     id: 1,
     name: 'ptBR',
-    icon: '🇧🇷',
+    icon: 'BR',
   },
   {
     id: 2,
     name: 'enUS',
-    icon: '🇺🇸',
+    icon: 'US',
   },
 ]
