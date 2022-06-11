@@ -6,6 +6,7 @@ import LanguageProvider from '../contexts/LanguageContext'
 import ThemeProvider from '../contexts/ThemeContext'
 import SidebarProvider from '../contexts/SidebarContext'
 import Layout from '../components/Layout'
+import AuthProvider from '../contexts/AuthContext'
 
 type NextPageWithLayout = NextPage & { getLayout?: (page: ReactElement) => ReactNode }
 type AppPropsWithLayout = AppProps & { Component: NextPageWithLayout }
@@ -16,9 +17,11 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <LanguageProvider>
       <ThemeProvider>
-        <SidebarProvider>
-          <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
-        </SidebarProvider>
+        <AuthProvider>
+          <SidebarProvider>
+            <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
+          </SidebarProvider>
+        </AuthProvider>
       </ThemeProvider>
     </LanguageProvider>
   )

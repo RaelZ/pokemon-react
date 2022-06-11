@@ -28,7 +28,7 @@ export const NavBarRight = styled.div`
 export const StyledMain = styled.main`${({ theme, open }: { theme: StyleTheme, open: boolean }) => `
   position: relative;
   bottom: 0;
-  left: ${open ? '0' : '5em'};
+  left: ${open ? '0' : '4.4em'};
 
   transition: left 0.25s ease-;
 

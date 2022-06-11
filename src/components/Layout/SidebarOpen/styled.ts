@@ -11,7 +11,7 @@ export const StyledSideBar = styled.div`${({ theme, open }: { theme: StyleTheme,
   justify-content: space-between;
 
   width: ${open ? '100%' : '0'};
-  max-width: ${open ? '16.000em' : '0'};
+  max-width: ${open ? '16em' : '0'};
   height: 100%;
 
   background-color: ${theme.colors.primary};
@@ -20,6 +20,7 @@ export const StyledSideBar = styled.div`${({ theme, open }: { theme: StyleTheme,
 
   transition: all .25s ease-in-out;
 
+  box-shadow: .25em 0 1em rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
 
   z-index: ${theme.zIndices.sidebar};

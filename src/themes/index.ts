@@ -44,8 +44,8 @@ const sizes = {
   },
   zIndices: {
     header: 100,
-    navbar: 200,
-    sidebar: 300,
+    navbar: 300,
+    sidebar: 200,
     footer: 400,
   },
 }

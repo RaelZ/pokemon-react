@@ -11,7 +11,7 @@ const Layout: React.FC<Children> = ({ children }) => {
   const { menuOpen } = useSidebar()
 
   return (
-    <div style={{ height: 'calc(100vh - 4.375em)' }}>
+    <div style={{ height: '100vh' }}>
       <Navbar />
       <Content>
         <SidebarOpen />

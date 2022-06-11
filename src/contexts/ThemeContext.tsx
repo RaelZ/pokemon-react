@@ -1,12 +1,13 @@
 import React, { createContext, FC, useState } from 'react'
-import { Theme, ThemeContextType, ThemeProps } from '../types/Theme'
+import { Children } from '../types/Children'
+import { Theme, ThemeContextType } from '../types/Theme'
 
 export const ThemeContext = createContext<ThemeContextType>({
   theme: 'dark',
   changeTheme: Function,
 })
 
-const ThemeProvider: FC<ThemeProps> = ({ children }) => {
+const ThemeProvider: FC<Children> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>('dark')
 
   const changeTheme = () => {

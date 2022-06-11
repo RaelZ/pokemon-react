@@ -1,8 +1,10 @@
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons'
 import { faTimesSquare } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useState } from 'react'
+import useAuth from '../../hooks/useAuth'
 import useTheme from '../../hooks/useTheme'
+import { ILogin } from '../../interfaces/ILogin'
 import { themes } from '../../themes'
 import { ModalBGTheme } from '../../types/Theme'
 import ModalBG from '../ModalBG'
@@ -14,6 +16,12 @@ import {
 
 const Login: React.FC<ModalBGTheme> = ({ onClose }) => {
   const { theme } = useTheme()
+  const { login } = useAuth();
+  const [user, setUser] = useState<ILogin>({
+    email: 'admin@admin.com',
+    password: 'Umbreon@197',
+    rememberMe: true,
+  })
 
   return (
     <>
@@ -23,13 +31,11 @@ const Login: React.FC<ModalBGTheme> = ({ onClose }) => {
           <StyledLoginHeaderTitle theme={themes[theme]}>
             Login
           </StyledLoginHeaderTitle>
-          <StyledLoginHeaderTitle
-            theme={themes[theme]}
-            onClick={onClose}
-          >
+          <StyledLoginHeaderTitle theme={themes[theme]} onClick={onClose}>
             <FontAwesomeIcon cursor="pointer" icon={faTimesCircle} />
           </StyledLoginHeaderTitle>
         </StyledLoginHeader>
+        <button onClick={() => login(user)}>login</button>
       </StyledLogin>
     </>
   )
