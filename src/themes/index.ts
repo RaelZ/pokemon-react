@@ -3,7 +3,7 @@ import { lighTheme } from './Light'
 
 const sizes = {
   fontSizes: {
-    small: '0.75rem',
+    small: '0.75em',
     medium: '1rem',
     large: '1.25rem',
     xlarge: '1.5rem',
@@ -27,7 +27,7 @@ const sizes = {
   padding: {
     xsmall: '0.25rem',
     small: '0.5rem',
-    medium: '0.75rem',
+    medium: '0.75em',
     large: '1rem',
     xlarge: '1.5rem',
   },

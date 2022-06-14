@@ -1,4 +1,4 @@
-import { LanguagesType } from '../../types/Language'
+import { LanguagesType } from "../../types/Language";
 
 export const dataLanguages: Array<LanguagesType> = [
   {

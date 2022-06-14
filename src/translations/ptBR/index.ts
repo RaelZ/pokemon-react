@@ -9,6 +9,14 @@ const PT = {
     logo: 'Logo',
     register: 'Registrar',
     login: 'Entrar',
+  },
+  modal: {
+    cancel: 'Cancelar',
+    confirm: 'Confirmar',
+    close: 'Fechar',
+    login: 'Entrar',
+    register: 'Registrar',
+    forgotPassword: 'Esqueceu sua senha?',
   }
 };
 export default PT;

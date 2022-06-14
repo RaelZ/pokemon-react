@@ -32,7 +32,7 @@ export const StyledRoundButton = styled.button`
   &:hover {
     background-color: ${noPadding ? `${theme!.colors.card}` : `${theme!.colors[bgcolor]}B0`};
     color: ${theme!.colors[color]};
-    box-shadow: ${noPadding ? '0' : '0 0 .5em 0 #00000080'};
+    box-shadow: ${noPadding ? '0' : '0 0 .2em 0 #00000080'};
   }
 `}
 `

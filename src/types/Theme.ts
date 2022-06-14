@@ -4,6 +4,7 @@ export type Theme = 'dark' | 'light'
 export type ThemeContextType = {
   theme: 'dark' | 'light'
   changeTheme: () => void
+  activeTheme: StyleTheme
 }
 export type StyleTheme = {
   colors: {

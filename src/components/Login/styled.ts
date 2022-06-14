@@ -12,7 +12,7 @@ export const StyledLogin = styled.div`
   max-width: 80vw;
   height: 30em;
   padding: ${theme.space.large};
-  background-color: ${theme.colors.alternative2};
+  background-color: ${theme.colors.card};
   border-radius: ${theme.radio.medium};
   box-shadow: ${theme.shadows.medium};
   z-index: 302;
@@ -32,6 +32,6 @@ export const StyledLoginHeaderTitle = styled.h2`
   font-size: ${theme.fontSizes.xlarge};
   font-weight: ${theme.fontWeights.bold};
   text-transform: uppercase;
-  color: ${theme.colors.primary};
+  color: ${theme.colors.alternative2};
 `}
 `

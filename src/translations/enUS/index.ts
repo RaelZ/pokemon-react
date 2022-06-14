@@ -10,6 +10,14 @@ const EN = {
     register: 'Register',
     login: 'Login',
   },
+  modal: {
+    cancel: 'Cancel',
+    confirm: 'Confirm',
+    close: 'Close',
+    login: 'Login',
+    register: 'Register',
+    forgotPassword: 'Forgot your password?',
+  }
 };
 
 export default EN;

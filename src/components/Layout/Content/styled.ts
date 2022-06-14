@@ -9,6 +9,6 @@ export const StyledContainer = styled.div`
   display: flex;
 
   width: ${open ? 'calc(100% - 16em)' : 'calc(100% - 4.4em)'};
-  height: 100%;
+  height: calc(100% - 3.375em - 0.75em);
 `}
 `

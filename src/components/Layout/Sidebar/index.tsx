@@ -2,7 +2,6 @@ import React from 'react'
 import useLanguage from '../../../hooks/useLanguage'
 import useSidebar from '../../../hooks/useSidebar'
 import useTheme from '../../../hooks/useTheme'
-import { themes } from '../../../themes'
 import SquaredButton from '../../SquaredButton'
 import { dataButtons, themeButton } from '../../../data/menu'
 import { StyledSideBar } from './styled'
@@ -10,14 +9,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 const Sidebar: React.FC = () => {
-  const { theme, changeTheme } = useTheme()
+  const { activeTheme, changeTheme, theme } = useTheme()
   const { language } = useLanguage()
   const { menuOpen } = useSidebar()
   const buttons = dataButtons(language)
   const themedButton = themeButton(language, theme)
 
   return (
-    <StyledSideBar open={!menuOpen} theme={themes[theme]}>
+    <StyledSideBar open={!menuOpen} theme={activeTheme}>
       <div>
         {buttons.map((button, index) => (
           <SquaredButton open={menuOpen} key={index}>

@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
 import useLanguage from '../../hooks/useLanguage'
 import useTheme from '../../hooks/useTheme'
-import { themes } from '../../themes'
 import ModalBG from '../ModalBG'
-import { dataLanguages } from '../../data/dataButtons'
 import {
   SquaredLanguageButton,
   StyledLanguageButton,
   StyledMenu,
 } from './styled'
 import ReactCountryFlag from 'react-country-flag'
+import { dataLanguages } from '../../data/dataButtons'
 
 const LaguageButton: React.FC = () => {
-  const { theme } = useTheme()
+  const { activeTheme } = useTheme()
   const { language, changeLanguage } = useLanguage()
   const [open, setOpen] = useState(false)
   const actualLanguage = dataLanguages.find((find) => find.name === language)
@@ -21,19 +20,19 @@ const LaguageButton: React.FC = () => {
     <>
       <StyledLanguageButton
         onClick={() => setOpen(!open)}
-        theme={themes[theme]}
+        theme={activeTheme}
       >
         <ReactCountryFlag countryCode={actualLanguage?.icon || 'BR'} />
       </StyledLanguageButton>
       {open && (
         <>
           <ModalBG onClose={() => setOpen(false)} />
-          <StyledMenu theme={themes[theme]}>
+          <StyledMenu theme={activeTheme}>
             {dataLanguages.map((item) => (
               <SquaredLanguageButton
                 onClick={() => changeLanguage(item.name)}
                 key={item.id}
-                theme={themes[theme]}
+                theme={activeTheme}
               >
                 <ReactCountryFlag countryCode={item.icon} />
               </SquaredLanguageButton>

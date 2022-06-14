@@ -5,7 +5,6 @@ import useLanguage from '../../../hooks/useLanguage'
 import useSidebar from '../../../hooks/useSidebar'
 import useTheme from '../../../hooks/useTheme'
 import Logo from '../../../icons/Logo'
-import { themes } from '../../../themes'
 import languages from '../../../translations'
 import LaguageButton from '../../LaguageButton'
 import Login from '../../Login'
@@ -15,13 +14,13 @@ import { StyledNav, StyledNavLeft, StyledNavRight } from './styled'
 const Navbar: React.FC = () => {
   const [modalLogin, setModalLogin] = useState(false)
 
-  const { theme } = useTheme()
+  const { activeTheme } = useTheme()
   const { changeSidebar } = useSidebar()
   const { language } = useLanguage()
 
   return (
     <>
-      <StyledNav theme={themes[theme]}>
+      <StyledNav theme={activeTheme}>
         <StyledNavLeft>
           <RoundButton
             onClick={changeSidebar}

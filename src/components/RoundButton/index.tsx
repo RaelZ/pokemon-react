@@ -1,6 +1,5 @@
 import React from 'react'
 import useTheme from '../../hooks/useTheme'
-import { themes } from '../../themes'
 import { RoundButtonTheme } from '../../types/Theme'
 import { StyledRoundButton } from './styled'
 
@@ -11,7 +10,7 @@ const RoundButton: React.FC<RoundButtonTheme> = ({
   noPadding,
   onClick
 }) => {
-  const { theme } = useTheme()
+  const { activeTheme } = useTheme()
 
   return (
     <StyledRoundButton
@@ -19,7 +18,7 @@ const RoundButton: React.FC<RoundButtonTheme> = ({
       noPadding={noPadding}
       color={color}
       bgcolor={bgcolor}
-      theme={themes[theme]}
+      theme={activeTheme}
     >
       {children}
     </StyledRoundButton>
